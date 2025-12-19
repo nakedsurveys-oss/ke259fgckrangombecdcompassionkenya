@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rangombecdc.vercel.app/sitemap.xml
+Sitemap: https://ke259fgckrangombecdcompassionkenya.vercel.app/sitemap.xml
+
