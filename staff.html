@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Leadership & Board | Rang'ombe CDC</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/download.jpg">
+
+  <style>
+    .card-hover {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .avatar {
+      background: linear-gradient(135deg, #14532d, #22c55e);
+    }
+
+    .fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.8s ease forwards;
+    }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- NAVBAR -->
+<nav class="bg-green-900 text-white fixed top-0 w-full z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="font-bold tracking-wide text-lg">
+      KE259 FGCK RANG'OMBE CDC
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 transition">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+      <li><a href="staff.html" class="text-yellow-300">Staff</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300 transition">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- MOBILE DROPDOWN MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 block">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 block">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300 block">Gallery</a></li>
+      <li><a href="staff.html" class="bg-yellow-400 text-green-900 px-3 py-1 rounded-md block">Staff</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300 block">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-green-900 to-green-700 text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Leadership & Governance</h1>
+    <p class="max-w-3xl mx-auto text-green-100 text-lg">
+      Dedicated servants guiding Rang'ombe Child Development Centre with integrity,
+      accountability, and vision.
+    </p>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-green-900 mb-12 text-center">
+        Executive & Management Team
+      </h2>
+
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- PF -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-24 h-24 mx-auto rounded-full avatar flex items-center justify-center text-white text-2xl font-bold mb-6">
+            AS
+          </div>
+          <h3 class="text-xl font-semibold text-green-900">PF Alex Shighuri</h3>
+          <p class="text-sm text-slate-600 mt-2">Project Supervisor</p>
+        </div>
+
+        <!-- Chairman -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-24 h-24 mx-auto rounded-full avatar flex items-center justify-center text-white text-2xl font-bold mb-6">
+            AO
+          </div>
+          <h3 class="text-xl font-semibold text-green-900">Armashud Odhiambo</h3>
+          <p class="text-sm text-slate-600 mt-2">Chairman</p>
+        </div>
+
+        <!-- Patron -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-24 h-24 mx-auto rounded-full avatar flex items-center justify-center text-white text-2xl font-bold mb-6">
+            RO
+          </div>
+          <h3 class="text-xl font-semibold text-green-900">Ronix Odula</h3>
+          <p class="text-sm text-slate-600 mt-2">Patron</p>
+        </div>
+
+        <!-- Director -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-24 h-24 mx-auto rounded-full avatar flex items-center justify-center text-white text-2xl font-bold mb-6">
+            EN
+          </div>
+          <h3 class="text-xl font-semibold text-green-900">Elizabeth Nyongesa</h3>
+          <p class="text-sm text-slate-600 mt-2">Director</p>
+        </div>
+
+        <!-- Accountant -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-24 h-24 mx-auto rounded-full avatar flex items-center justify-center text-white text-2xl font-bold mb-6">
+            SO
+          </div>
+          <h3 class="text-xl font-semibold text-green-900">Stephen Omondi</h3>
+          <p class="text-sm text-slate-600 mt-2">Accountant</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD MEMBERS -->
+  <section class="bg-slate-100 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-green-900 mb-12 text-center">
+        Board Members
+      </h2>
+
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <!-- Secretary -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-20 h-20 mx-auto rounded-full avatar flex items-center justify-center text-white text-xl font-bold mb-5">
+            ML
+          </div>
+          <h3 class="font-semibold text-green-900">Mark Lieta</h3>
+          <p class="text-sm text-slate-600 mt-1">Secretary</p>
+        </div>
+
+        <!-- Treasurer -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-20 h-20 mx-auto rounded-full avatar flex items-center justify-center text-white text-xl font-bold mb-5">
+            CM
+          </div>
+          <h3 class="font-semibold text-green-900">Caroline Maxwell</h3>
+          <p class="text-sm text-slate-600 mt-1">Treasurer</p>
+        </div>
+
+        <!-- Parent Rep -->
+        <div class="bg-white rounded-xl p-8 text-center card-hover">
+          <div class="w-20 h-20 mx-auto rounded-full avatar flex items-center justify-center text-white text-xl font-bold mb-5">
+            JO
+          </div>
+          <h3 class="font-semibold text-green-900">Josephine Okumu</h3>
+          <p class="text-sm text-slate-600 mt-1">Parent Representative</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-950 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-sm">© 2025 Rang'ombe Child Development Centre | Compassion Kenya</p>
+    </div>
+  </footer>
+
+  <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>

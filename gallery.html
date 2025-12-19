@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gallery | Rang'ombe Child Development Centre</title>
+
+  <!-- META -->
+  <meta name="description"
+    content="Explore moments of impact, growth, and transformation at Rang'ombe Child Development Centre through our gallery.">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/download.jpg">
+
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .gallery-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- NAVBAR -->
+<nav class="bg-green-900 text-white fixed top-0 w-full z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="font-bold tracking-wide text-lg">
+      KE259 FGCK RANG'OMBE CDC
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300">Programs</a></li>
+      <li><a href="gallery.html" class="text-yellow-300">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300">Staff</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- MOBILE DROPDOWN MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 block">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 block">Programs</a></li>
+      <li><a href="gallery.html" class="text-yellow-300 block">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300 block">Staff</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300 block">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-[70vh] pt-24 flex items-center">
+    <div class="absolute inset-0">
+      <img src="images/IMG-20251212-WA0004.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-100" />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 text-white text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Moments That Tell Our Story
+      </h1>
+      <p class="text-lg max-w-3xl mx-auto text-slate-200">
+        Every image reflects hope, growth, and transformation as children and families
+        walk their journey of holistic development at Rang'ombe CDC.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-green-900 mb-12 text-center">
+        Life at Rang'ombe CDC
+      </h2>
+
+      <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <!-- IMAGE CARD -->
+        <img src="images/IMG-20251212-WA0001.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251217_154349_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0002.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0003.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251217_154502_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0005.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251217_154602_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0006.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0008.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251217_154104_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251212-WA0011.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251213-WA0002.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251217_154502_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG-20251213-WA0003.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+
+        <img src="images/IMG_20251216_131018_HDR.jpg" class="gallery-card rounded-xl object-cover h-64 w-full"
+          onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox"
+    class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[100]">
+    <span onclick="closeLightbox()"
+      class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] rounded-xl fade-in" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-950 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-sm">
+        © 2025 Rang'ombe Child Development Centre | Compassion Kenya
+      </p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+    }
+
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support a Child – Rang'ombe CDC | Compassion Kenya</title>
+<meta name="description" content="Support a child at Rang'ombe CDC. Your contribution provides education, healthcare, mentorship and hope for a brighter future.">
+
+<!-- PREFETCH -->
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+<!-- TAILWIND -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+ <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/download.jpg">
+
+<style>
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .9s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal */
+#paymentModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 60;
+  align-items: center;
+  justify-content: center;
+}
+.modal-box {
+  background: #0b6623;
+  width: 300px;
+  height: 300px;
+  border-radius: 18px;
+  padding: 1.6rem;
+  color: white;
+  position: relative;
+  animation: scaleIn .35s ease;
+  box-shadow: 0 30px 60px rgba(0,0,0,.45);
+}
+@keyframes scaleIn {
+  from { transform: scale(.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+.copy-btn {
+  background: #facc15;
+  color: #14532d;
+  padding: .3rem .7rem;
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+</style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<!-- NAVBAR -->
+<nav class="bg-green-900 text-white fixed top-0 w-full z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="font-bold tracking-wide text-lg">
+      KE259 FGCK RANG'OMBE CDC
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 transition">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300 transition">Staff</a></li>
+    </ul>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- MOBILE DROPDOWN MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 block">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 block">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300 block">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300 block">Staff</a></li>
+    </ul>
+  </div>
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
+
+<!-- HERO -->
+<section class="pt-28 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
+  <div class="max-w-4xl mx-auto px-6 py-20 text-center reveal">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+      Support a Child
+    </h1>
+    <p class="text-green-100 text-lg leading-relaxed">
+      Your generosity provides education, healthcare, mentorship, and hope —
+      empowering children and families at Rang'ombe CDC.
+    </p>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="max-w-5xl mx-auto px-6 py-16 text-center reveal">
+  <h2 class="text-2xl md:text-3xl font-bold text-green-900 mb-4">
+    Why Your Support Matters
+  </h2>
+  <p class="text-slate-600 leading-relaxed max-w-3xl mx-auto">
+    Every contribution directly supports holistic child development —
+    nurturing spiritual growth, academic success, health, and long-term resilience.
+  </p>
+</section>
+
+<!-- FORM -->
+<section class="max-w-3xl mx-auto px-6 pb-20 reveal">
+  <div class="bg-white rounded-2xl shadow-xl p-8">
+    <h3 class="text-2xl font-bold text-green-900 text-center mb-6">
+      Make a Support Pledge
+    </h3>
+
+    <form class="space-y-4">
+      <input required placeholder="Full Name"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600">
+
+      <input required type="email" placeholder="Email Address"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600">
+
+      <select id="amount" required
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600">
+        <option value="">Select Amount (KES)</option>
+        <option>500</option>
+        <option>1000</option>
+        <option>2000</option>
+        <option>5000</option>
+        <option value="other">Other</option>
+      </select>
+
+      <input id="customAmount" type="number" min="100"
+        placeholder="Enter custom amount"
+        class="hidden w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600">
+
+      <textarea rows="4" placeholder="Optional message"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600"></textarea>
+
+      <button type="submit"
+        class="w-full bg-green-900 hover:bg-yellow-400 hover:text-green-900 text-white font-semibold py-3 rounded-lg transition shadow-md">
+        Submit Pledge
+      </button>
+
+      <div class="flex justify-center gap-4 pt-6">
+        <button type="button" onclick="openModal('mpesa')"
+          class="px-6 py-2 bg-green-900 hover:bg-yellow-400 hover:text-green-900 text-white rounded-lg font-semibold transition">
+          Pay via M-Pesa
+        </button>
+        <button type="button" onclick="openModal('paypal')"
+          class="px-6 py-2 bg-green-900 hover:bg-yellow-400 hover:text-green-900 text-white rounded-lg font-semibold transition">
+          Pay via PayPal
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="paymentModal">
+  <div class="modal-box text-center">
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-xl">&times;</button>
+    <h3 id="modalTitle" class="text-lg font-bold mb-3"></h3>
+    <div id="modalBody" class="space-y-2 text-sm"></div>
+    <p class="text-[11px] opacity-80 mt-4">
+      Need help?<br>
+      <strong>0705 330 016</strong> | <strong>0710 486 634</strong><br>
+      ke259fgckrangombe@gmail.com
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-green-900 text-white text-center py-6">
+  <p class="text-sm">© 2025 Rang'ombe CDC | Compassion Kenya</p>
+</footer>
+
+<script>
+// Reveal animation
+const reveals = document.querySelectorAll('.reveal');
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// Amount toggle
+const amount = document.getElementById('amount');
+const custom = document.getElementById('customAmount');
+amount.addEventListener('change', ()=>{
+  custom.classList.toggle('hidden', amount.value !== 'other');
+});
+
+// Modal
+function openModal(type){
+  document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('paymentModal');
+  const title = document.getElementById('modalTitle');
+  const body = document.getElementById('modalBody');
+  modal.style.display = 'flex';
+
+  if(type === 'mpesa'){
+    title.innerText = "M-Pesa Payment";
+    body.innerHTML = `
+      <p>Paybill: <strong id="pb">123456</strong></p>
+      <button class="copy-btn" onclick="copyText('pb')">Copy</button>
+      <p>Account: <strong id="acc">CHILD001</strong></p>
+      <button class="copy-btn" onclick="copyText('acc')">Copy</button>
+      <p class="text-xs opacity-80 mt-2">Complete payment on your phone.</p>
+    `;
+  } else {
+    title.innerText = "PayPal Donation";
+    body.innerHTML = `
+      <p>Email: <strong id="pp">donate@rangombe.org</strong></p>
+      <button class="copy-btn" onclick="copyText('pp')">Copy</button>
+      <a href="https://paypal.me/rangombe" target="_blank"
+        class="block mt-3 underline text-yellow-300">Open PayPal</a>
+    `;
+  }
+}
+
+function closeModal(){
+  document.body.style.overflow = '';
+  document.getElementById('paymentModal').style.display = 'none';
+}
+
+function copyText(id){
+  navigator.clipboard.writeText(document.getElementById(id).innerText);
+}
+</script>
+
+</body>
+</html>

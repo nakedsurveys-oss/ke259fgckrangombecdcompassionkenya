@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | Rang'ombe Child Development Centre</title>
+
+  <meta name="description"
+    content="Get in touch with Rang'ombe Child Development Centre. Call, message, or email us to learn more about our programs and partnerships.">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/download.jpg">
+
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- NAVBAR -->
+<nav class="bg-green-900 text-white fixed top-0 w-full z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="font-bold tracking-wide text-lg">
+      KE259 FGCK RANG'OMBE CDC
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300">Staff</a></li>
+      <li><a href="contact.html" class="text-yellow-300">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn"
+      class="md:hidden focus:outline-none"
+      aria-label="Toggle Menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- MOBILE DROPDOWN MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-yellow-300 block">Home</a></li>
+      <li><a href="programs.html" class="hover:text-yellow-300 block">Programs</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-300 block">Gallery</a></li>
+      <li><a href="staff.html" class="hover:text-yellow-300 block">Staff</a></li>
+      <li><a href="contact.html" class="text-yellow-300 block">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-[60vh] pt-24 flex items-center">
+    <div class="absolute inset-0">
+      <img src="images/IMG-20251212-WA0004.jpg"
+        class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/65"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 text-center text-white fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Get in Touch With Us
+      </h1>
+      <p class="text-lg max-w-3xl mx-auto text-slate-200">
+        We are happy to hear from partners, caregivers, sponsors, and community members.
+        Reach out to Rang'ombe Child Development Centre today.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="grid gap-10 md:grid-cols-2">
+
+        <!-- CONTACT INFO -->
+        <div class="contact-card bg-white rounded-xl p-8 shadow-lg fade-up">
+          <h2 class="text-2xl font-bold text-green-900 mb-6">
+            Contact Information
+          </h2>
+
+          <p class="mb-6 text-slate-600">
+            You can reach us directly via phone, text message, or email.
+            Our team will respond as soon as possible.
+          </p>
+
+          <!-- PHONE 1 -->
+          <div class="mb-6">
+            <p class="font-semibold text-green-900 mb-2">0710 401 296</p>
+            <div class="flex gap-4">
+              <a href="tel:+254710401296"
+                class="flex-1 text-center bg-green-900 text-white py-3 rounded-lg hover:bg-green-800 transition">
+                Call
+              </a>
+              <a href="sms:+254710401296"
+                class="flex-1 text-center bg-yellow-400 text-green-900 py-3 rounded-lg hover:bg-yellow-300 transition font-semibold">
+                SMS
+              </a>
+            </div>
+          </div>
+
+          <!-- PHONE 2 -->
+          <div class="mb-6">
+            <p class="font-semibold text-green-900 mb-2">0723 070 752</p>
+            <div class="flex gap-4">
+              <a href="tel:+254723070752"
+                class="flex-1 text-center bg-green-900 text-white py-3 rounded-lg hover:bg-green-800 transition">
+                Call
+              </a>
+              <a href="sms:+254723070752"
+                class="flex-1 text-center bg-yellow-400 text-green-900 py-3 rounded-lg hover:bg-yellow-300 transition font-semibold">
+                SMS
+              </a>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="mt-8">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ke259fgckrangombe@gmail.com"
+              target="_blank"
+              class="block text-center bg-green-900 text-white py-4 rounded-lg hover:bg-green-800 transition font-semibold">
+              Email Rang'ombe CDC
+            </a>
+          </div>
+        </div>
+
+        <!-- MESSAGE CTA -->
+        <div class="contact-card bg-green-900 text-white rounded-xl p-8 shadow-lg fade-up">
+          <h2 class="text-2xl font-bold mb-6">
+            Why Reach Out?
+          </h2>
+
+          <ul class="space-y-4 text-green-100">
+            <li>• Learn more about child sponsorship</li>
+            <li>• Partner with us in community programs</li>
+            <li>• Support a child or family</li>
+            <li>• Visit or collaborate with the CDC</li>
+          </ul>
+
+          <p class="mt-8 text-green-200">
+            Together, we can release children from poverty and build a hopeful future.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-950 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-sm">
+        © 2025 Rang'ombe Child Development Centre | Compassion Kenya
+      </p>
+    </div>
+  </footer>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>  
+
+</body>
+</html>
