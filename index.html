@@ -1,315 +1,625 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <!-- BASIC META -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="google-site-verification" content="qNZ50SBWPcu-ilJ2_YNzcVX2gXsqOzARyCZ3fN6KL2A" />
 
   <title>Rang'ombe Child Development Centre | Compassion Kenya</title>
 
-  <meta name="description"
-    content="Rang'ombe Child Development Centre (CDC) is a ministry of the Full Gospel Church partnering with Compassion Kenya to release children from poverty through holistic child development.">
-
-  <meta name="keywords"
-    content="Rang'ombe CDC, Compassion Kenya, Child Development Centre Kenya, Child Sponsorship, Homabay NGO">
-
+  <meta name="description" content="Rang'ombe Child Development Centre (CDC) is a ministry of the Full Gospel Church partnering with Compassion Kenya to release children from poverty through holistic child development.">
+  <meta name="keywords" content="Rang'ombe CDC, Compassion Kenya, Child Development Centre Kenya, Child Sponsorship, Homabay NGO, Full Gospel Church">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14532d">
 
   <link rel="canonical" href="https://ke259fgckrangombecdcompassionkenya.vercel.app/">
 
-  <link rel="stylesheet" href="styles.css">
-
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Rang'ombe Child Development Centre">
-  <meta property="og:description"
-    content="Transforming lives, building hope, and empowering futures through holistic child development in Kenya.">
+  <meta property="og:title" content="Rang'ombe Child Development Centre | Compassion Kenya">
+  <meta property="og:description" content="Transforming lives, building hope, and empowering futures through holistic child development in Kenya.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rangombecdc.vercel.app/">
-  <meta property="og:image"
-    content="https://rangombecdc.vercel.app/images/IMG-20251212-WA0004.jpg">
+  <meta property="og:url" content="https://ke259fgckrangombecdcompassionkenya.vercel.app/">
+  <meta property="og:image" content="https://ke259fgckrangombecdcompassionkenya.vercel.app/images/IMG-20251212-WA0004.jpg">
+  <meta property="og:site_name" content="Rang'ombe CDC">
 
-  <!-- PREFETCH -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-
-  <!-- TAILWIND -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rang'ombe Child Development Centre">
+  <meta name="twitter:description" content="Transforming lives, building hope, and empowering futures through holistic child development in Kenya.">
+  <meta name="twitter:image" content="https://ke259fgckrangombecdcompassionkenya.vercel.app/images/IMG-20251212-WA0004.jpg">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="images/download.jpg">
+  <link rel="icon" type="image/jpeg" href="images/download.jpg">
+  <link rel="apple-touch-icon" href="images/download.jpg">
+
+  <!-- TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#14532d',      // Deep green primary
+              lightGreen: '#166534', // Complementary green shade
+              accent: '#fbbf24',     // Yellow/gold highlights
+              accentHover: '#f59e0b',// Gold hover state
+              bg: '#f8fafc',         // Soft neutral background
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'ken-burns': 'kenBurns 24s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            kenBurns: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CUSTOM STYLES -->
   <style>
-    html,
-    body {
+    /* Base & Accessibility */
+    html, body {
       overflow-x: hidden;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    /* Focus visible for keyboard navigation accessibility */
+    *:focus-visible {
+      outline: 3px solid #fbbf24;
+      outline-offset: 2px;
     }
 
-    * {
-      scroll-behavior: smooth;
+    /* Professional Page Loader */
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      background-color: #14532d;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
     }
-
-    body {
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .page-enter {
+    #page-loader.hidden-loader {
       opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .loader-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(251, 191, 36, 0.3);
+      border-top-color: #fbbf24;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
+    /* Respects user's reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .animate-ken-burns {
+        animation: none;
+        transform: scale(1);
+      }
+    }
+
+    /* Scroll Reveal Utility */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero Slideshow with Ken Burns Effect */
     .hero-slide {
-      animation: fadeSlide 24s infinite;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: heroFade 24s infinite;
+    }
+    .hero-slide:nth-child(1) { animation-delay: 0s; }
+    .hero-slide:nth-child(2) { animation-delay: 6s; }
+    .hero-slide:nth-child(3) { animation-delay: 12s; }
+    .hero-slide:nth-child(4) { animation-delay: 18s; }
+
+    @keyframes heroFade {
+      0% { opacity: 0; }
+      4% { opacity: 1; }
+      25% { opacity: 1; }
+      29% { opacity: 0; }
+      100% { opacity: 0; }
     }
 
-    .hero-slide:nth-child(2) {
-      animation-delay: 6s;
-    }
-
-    .hero-slide:nth-child(3) {
-      animation-delay: 12s;
-    }
-
-    .hero-slide:nth-child(4) {
-      animation-delay: 18s;
-    }
-
-    @keyframes fadeSlide {
-      0% {
-        opacity: 0;
-      }
-
-      8% {
-        opacity: 1;
-      }
-
-      25% {
-        opacity: 1;
-      }
-
-      33% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @media (max-height: 700px) {
-      .hero-fix {
-        padding-top: 6rem;
-        padding-bottom: 4rem;
-      }
-    }
+    /* Custom scrollbar for premium feel */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #14532d; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #166534; }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 page-enter">
+<body class="bg-brand-bg text-slate-800 antialiased opacity-0" style="transition: opacity 0.5s ease-out;">
 
- <!-- NAVBAR -->
-<nav class="bg-green-900 text-white shadow-lg fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-    <!-- LOGO / TITLE -->
-    <div class="font-bold tracking-wide text-lg">
-      KE259 FGCK RANG'OMBE CDC
+  <!-- PROFESSIONAL LOADER -->
+  <div id="page-loader" role="status" aria-label="Loading website">
+    <div class="text-white text-2xl font-bold tracking-wider mb-4 animate-pulse-slow">
+      RANG'OMBE CDC
     </div>
-
-    <!-- DESKTOP MENU -->
-    <ul class="hidden md:flex gap-6 text-sm font-medium">
-      <li><a href="index.html" class="text-yellow-300">Home</a></li>
-      <li><a href="programs.html" class="hover:text-yellow-300 transition">Programs</a></li>
-      <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
-      <li><a href="staff.html" class="hover:text-yellow-300 transition">Staff</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300 transition">Contact</a></li>
-    </ul>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button id="menu-btn"
-      class="md:hidden focus:outline-none"
-      aria-label="Toggle Menu">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-        viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
+    <div class="loader-spinner"></div>
+    <p class="text-brand-accent mt-4 text-sm font-medium">Loading hope...</p>
   </div>
 
-  <!-- MOBILE DROPDOWN MENU -->
-  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
-    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
-      <li><a href="index.html" class="text-yellow-300 block">Home</a></li>
-      <li><a href="programs.html" class="hover:text-yellow-300 transition block">Programs</a></li>
-      <li><a href="gallery.html" class="hover:text-yellow-300 transition block">Gallery</a></li>
-      <li><a href="staff.html" class="hover:text-yellow-300 transition block">Staff</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300 transition block">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-  <!-- HERO -->
-  <section class="relative min-h-screen pt-24 hero-fix flex items-center">
-    <div class="absolute inset-0">
-      <img src="images/IMG-20251212-WA0004.jpg" alt="Children at Rang'ombe CDC"
-        class="hero-slide absolute inset-0 w-full h-full object-cover">
-      <img src="images/IMG-20251212-WA0008.jpg" alt="Community activities"
-        class="hero-slide absolute inset-0 w-full h-full object-cover">
-      <img src="images/IMG-20251212-WA0001.jpg" alt="Learning and mentorship"
-        class="hero-slide absolute inset-0 w-full h-full object-cover">
-      <img src="images/IMG-20251212-WA0005.jpg" alt="CDC celebrations"
-        class="hero-slide absolute inset-0 w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/55"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-6 w-full">
-      <div class="max-w-2xl text-white">
-        <h1 class="font-bold text-white text-3x1 sm:text-4xl md:text-5xl leading-[1.25] sm:leading-[1.3] md:leading-[1.2] space-y-3 mb-6">
-          <span class="block">Releasing Children From Poverty</span>
-          <span class="block">Holistic Development</span>
-          <span class="block">Fostering Hope</span>
-        </h1>
-
-        <p class="text-lg mb-8 text-slate-100 leading-relaxed">
-          Rang'ombe Child Development Centre partners with Compassion and the community
-          to release children from poverty in Jesus' name through holistic development —
-          spiritual, physical, cognitive, and socio-emotional.
-        </p>
-
-        <a href="support.html"
-          class="inline-block bg-yellow-400 text-green-900 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-yellow-300 transition">
-          Support a Child
+  <!-- NAVBAR -->
+  <header class="bg-brand-green text-white shadow-lg fixed top-0 w-full z-40 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- LOGO / TITLE -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center text-brand-green font-bold text-lg shadow-md group-hover:scale-105 transition-transform duration-300">
+            R
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg leading-tight tracking-wide group-hover:text-brand-accent transition-colors">KE259 FGCK</span>
+            <span class="text-xs text-slate-300 font-medium tracking-wider">RANG'OMBE CDC</span>
+          </div>
         </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+          <a href="index.html" class="text-brand-accent font-semibold text-sm tracking-wide relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-accent after:scale-x-100 after:origin-left">Home</a>
+          <a href="programs.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-accent transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-accent after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100">Programs</a>
+          <a href="gallery.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-accent transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-accent after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100">Gallery</a>
+          <a href="staff.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-accent transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-accent after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100">Staff</a>
+          <a href="contact.html" class="text-slate-200 font-medium text-sm tracking-wide hover:text-brand-accent transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-accent after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100">Contact</a>
+          <a href="support.html" class="ml-4 bg-brand-accent text-brand-green font-bold px-5 py-2.5 rounded-lg shadow-md hover:bg-brand-accentHover hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-sm">
+            Support a Child
+          </a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="menu-btn" class="md:hidden focus:outline-none p-2 rounded-md hover:bg-brand-lightGreen transition-colors" aria-label="Toggle Menu" aria-expanded="false">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
-  </section>
 
-  <!-- IMPACT -->
-  <section class="bg-white py-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-green-900 mb-12">
-        Our Impact at a Glance
-      </h2>
+    <!-- MOBILE DROPDOWN MENU -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-lightGreen border-t border-green-800 shadow-xl">
+      <nav class="flex flex-col px-6 py-4 gap-2" aria-label="Mobile Navigation">
+        <a href="index.html" class="text-brand-accent font-semibold py-3 px-4 rounded-lg hover:bg-brand-green transition-colors">Home</a>
+        <a href="programs.html" class="text-slate-200 font-medium py-3 px-4 rounded-lg hover:bg-brand-green hover:text-brand-accent transition-colors">Programs</a>
+        <a href="gallery.html" class="text-slate-200 font-medium py-3 px-4 rounded-lg hover:bg-brand-green hover:text-brand-accent transition-colors">Gallery</a>
+        <a href="staff.html" class="text-slate-200 font-medium py-3 px-4 rounded-lg hover:bg-brand-green hover:text-brand-accent transition-colors">Staff</a>
+        <a href="contact.html" class="text-slate-200 font-medium py-3 px-4 rounded-lg hover:bg-brand-green hover:text-brand-accent transition-colors">Contact</a>
+        <a href="support.html" class="mt-2 bg-brand-accent text-brand-green font-bold text-center px-4 py-3 rounded-lg shadow-md hover:bg-brand-accentHover transition-colors">Support a Child</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
-        <div>
-          <p class="counter text-4xl font-bold text-green-900" data-target="420">0</p>
-          <p class="mt-2 text-sm">Children & Youth Supported</p>
-        </div>
-        <div>
-          <p class="counter text-4xl font-bold text-green-900" data-target="16">0</p>
-          <p class="mt-2 text-sm">Home-Based Programs</p>
-        </div>
-        <div>
-          <p class="counter text-4xl font-bold text-green-900" data-target="0">0</p>
-          <p class="mt-2 text-sm">Survival Programs</p>
-        </div>
-        <div>
-          <p class="counter text-4xl font-bold text-green-900" data-target="480">0</p>
-          <p class="mt-2 text-sm">Church School Population</p>
+  <main>
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Images with Ken Burns -->
+      <div class="absolute inset-0 z-0">
+        <img src="images/IMG-20251212-WA0004.jpg" alt="Children at Rang'ombe CDC smiling and learning" class="hero-slide animate-ken-burns" loading="eager">
+        <img src="images/IMG-20251212-WA0008.jpg" alt="Community activities and mentorship at Rang'ombe" class="hero-slide animate-ken-burns" loading="eager">
+        <img src="images/IMG-20251212-WA0001.jpg" alt="Learning and spiritual growth sessions" class="hero-slide animate-ken-burns" loading="eager">
+        <img src="images/IMG-20251212-WA0005.jpg" alt="Joyful CDC celebrations and events" class="hero-slide animate-ken-burns" loading="eager">
+        <!-- Gradient Overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-green/70 via-brand-green/50 to-brand-green/80"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
+        <div class="max-w-3xl text-white animate-slide-up">
+          <div class="inline-block bg-brand-accent/20 border border-brand-accent/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase">Compassion Kenya Partner</span>
+          </div>
+          
+          <h1 class="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 drop-shadow-lg">
+            <span class="block">Releasing Children</span>
+            <span class="block text-brand-accent">From Poverty</span>
+            <span class="block text-2xl sm:text-3xl md:text-4xl font-semibold mt-2 text-slate-100">Through Holistic Development</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-100 leading-relaxed mb-10 max-w-2xl drop-shadow-md">
+            Rang'ombe Child Development Centre partners with Compassion and the local community to release children from poverty in Jesus' name through spiritual, physical, cognitive, and socio-emotional development.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="support.html" class="inline-flex items-center justify-center bg-brand-accent text-brand-green font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-brand-accentHover hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-lg group">
+              Support a Child
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+            <a href="programs.html" class="inline-flex items-center justify-center bg-white/10 backdrop-blur-md border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-lg">
+              Our Programs
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="bg-slate-100 py-20">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-green-900 mb-6">
-        Who We Are
-      </h2>
-      <p class="text-lg leading-relaxed">
-        Rang'ombe CDC is a ministry of the Rang'ombe Full Gospel Church committed to
-        nurturing children and youth through education, mentorship, healthcare,
-        spiritual growth, and skills development.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="bg-green-900 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">
-        Join Us in Changing Lives
-      </h2>
-      <p class="mb-8 text-green-100">
-        Your partnership helps children access education, healthcare,
-        mentorship, and hope for a better tomorrow.
-      </p>
-      <a href="support.html"
-        class="inline-block bg-yellow-400 text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition">
-        Become a Supporter
-      </a>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-2xl font-bold text-green-900 text-center mb-6">
-        Our Location
-      </h2>
-
-      <div class="w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255342.87925711783!2d34.27764382314453!3d-0.37582558322956566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d52c9e7014715b%3A0xabd017c7dcea13c9!2sRang&#39;ombe%20Full%20Gospel%20Church!5e0!3m2!1sen!2ske!4v1765989918353!5m2!1sen!2ske"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      
+      <!-- Scroll Down Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce hidden sm:block">
+        <svg class="w-8 h-8 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- IMPACT STATS -->
+    <section class="bg-white py-20 lg:py-28 relative overflow-hidden">
+      <!-- Decorative background element -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal-on-scroll">
+          <h2 class="text-brand-accent font-bold tracking-wider uppercase text-sm mb-3">Our Impact</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-green mb-4">Transforming Lives at a Glance</h3>
+          <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Stat Card 1 -->
+          <div class="reveal-on-scroll bg-slate-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-accent group">
+            <div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+              <svg class="w-8 h-8 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </div>
+            <p class="counter text-4xl lg:text-5xl font-extrabold text-brand-green mb-2" data-target="420">0</p>
+            <p class="text-slate-600 font-medium">Children & Youth Supported</p>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="reveal-on-scroll bg-slate-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-accent group" style="transition-delay: 100ms;">
+            <div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+              <svg class="w-8 h-8 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <p class="counter text-4xl lg:text-5xl font-extrabold text-brand-green mb-2" data-target="16">0</p>
+            <p class="text-slate-600 font-medium">Home-Based Programs</p>
+          </div>
+
+          <!-- Stat Card 3 -->
+          <div class="reveal-on-scroll bg-slate-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-accent group" style="transition-delay: 200ms;">
+            <div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+              <svg class="w-8 h-8 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            </div>
+            <p class="counter text-4xl lg:text-5xl font-extrabold text-brand-green mb-2" data-target="0">0</p>
+            <p class="text-slate-600 font-medium">Survival Programs</p>
+          </div>
+
+          <!-- Stat Card 4 -->
+          <div class="reveal-on-scroll bg-slate-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-brand-accent group" style="transition-delay: 300ms;">
+            <div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+              <svg class="w-8 h-8 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <p class="counter text-4xl lg:text-5xl font-extrabold text-brand-green mb-2" data-target="480">0</p>
+            <p class="text-slate-600 font-medium">Church School Population</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="bg-slate-100 py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <!-- Image Side -->
+          <div class="reveal-on-scroll relative">
+            <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-accent/20 rounded-full blur-xl"></div>
+            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-green/20 rounded-full blur-xl"></div>
+            <img src="images/IMG-20251212-WA0001.jpg" alt="Children learning at Rang'ombe CDC" class="relative rounded-2xl shadow-2xl w-full object-cover h-[400px] lg:h-[500px] border-4 border-white" loading="lazy">
+            <div class="absolute -bottom-6 -right-6 bg-brand-green text-white p-6 rounded-xl shadow-xl hidden md:block">
+              <p class="text-3xl font-bold text-brand-accent">10+</p>
+              <p class="text-sm font-medium">Years of Service</p>
+            </div>
+          </div>
+
+          <!-- Text Side -->
+          <div class="reveal-on-scroll">
+            <h2 class="text-brand-accent font-bold tracking-wider uppercase text-sm mb-3">Who We Are</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-green mb-6 leading-tight">Nurturing Futures, Building Hope</h3>
+            <div class="w-20 h-1.5 bg-brand-accent rounded-full mb-8"></div>
+            
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+              Rang'ombe CDC is a ministry of the Rang'ombe Full Gospel Church committed to nurturing children and youth through education, mentorship, healthcare, spiritual growth, and skills development.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed mb-8">
+              We believe every child deserves the opportunity to thrive. By partnering with Compassion Kenya, we provide a safe, supportive environment where children can discover their potential and break the cycle of poverty.
+            </p>
+
+            <a href="programs.html" class="inline-flex items-center text-brand-green font-bold hover:text-brand-accent transition-colors duration-300 group">
+              Learn More About Our Programs
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-brand-green relative py-20 lg:py-28 overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-on-scroll">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+          Join Us in Changing Lives
+        </h2>
+        <p class="text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Your partnership helps children access education, healthcare, mentorship, and hope for a better tomorrow. Every contribution creates a ripple effect of transformation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="support.html" class="inline-flex items-center justify-center bg-brand-accent text-brand-green font-bold px-10 py-4 rounded-xl shadow-lg hover:bg-brand-accentHover hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-lg">
+            Become a Supporter
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white font-semibold px-10 py-4 rounded-xl hover:bg-white hover:text-brand-green transition-all duration-300 text-lg">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal-on-scroll">
+          <h2 class="text-brand-accent font-bold tracking-wider uppercase text-sm mb-3">Find Us</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-green mb-4">Our Location</h3>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Visit us at the Rang'ombe Full Gospel Church premises. We are always open to visitors and partners who wish to see our work firsthand.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll w-full h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-100 relative group">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255342.87925711783!2d34.27764382314453!3d-0.37582558322956566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d52c9e7014715b%3A0xabd017c7dcea13c9!2sRang&#39;ombe%20Full%20Gospel%20Church!5e0!3m2!1sen!2ske!4v1765989918353!5m2!1sen!2ske"
+            width="100%"
+            height="100%"
+            style="border:0; filter: grayscale(20%) contrast(1.1);"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Rang'ombe Full Gospel Church Location Map"
+            class="group-hover:filter-none transition-all duration-500">
+          </iframe>
+          
+          <!-- Map Overlay Card -->
+          <div class="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg max-w-xs hidden sm:block">
+            <div class="flex items-start gap-3">
+              <div class="bg-brand-green/10 p-2 rounded-lg">
+                <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-brand-green text-sm">Rang'ombe Full Gospel Church</h4>
+                <p class="text-slate-600 text-xs mt-1">Homabay County, Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-green-950 text-white py-8">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-sm">© 2025 Rang'ombe CDC | Compassion Kenya</p>
+  <footer class="bg-brand-green text-white pt-16 pb-8 border-t border-green-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center text-brand-green font-bold text-lg">R</div>
+            <div>
+              <h4 class="font-bold text-lg leading-tight">KE259 FGCK</h4>
+              <p class="text-xs text-slate-300">RANG'OMBE CDC</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Partnering with Compassion Kenya to release children from poverty through holistic child development in Jesus' name.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-brand-accent">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">Home</a></li>
+            <li><a href="programs.html" class="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">Programs</a></li>
+            <li><a href="gallery.html" class="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">Gallery</a></li>
+            <li><a href="staff.html" class="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">Staff</a></li>
+            <li><a href="contact.html" class="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-brand-accent">Contact Us</h4>
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span>Rang'ombe Full Gospel Church,<br>Homabay County, Kenya</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <a href="mailto:info@rangombecdc.org" class="hover:text-brand-accent transition-colors">info@rangombecdc.org</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-brand-accent">Make a Difference</h4>
+          <p class="text-slate-300 text-sm mb-6">Join our mission to empower the next generation. Your support changes lives.</p>
+          <a href="support.html" class="inline-block bg-brand-accent text-brand-green font-bold px-6 py-3 rounded-lg shadow-md hover:bg-brand-accentHover transition-all duration-300 text-sm w-full text-center">
+            Support a Child Today
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-green-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 text-sm text-center md:text-left">
+          &copy; <span id="current-year">2025</span> Rang'ombe Child Development Centre. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-sm text-slate-400">
+          <a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-brand-accent transition-colors">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- COUNTER SCRIPT -->
+  <!-- SCRIPTS -->
   <script>
-    const counters = document.querySelectorAll('.counter');
+    // 1. Page Loader
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('page-loader');
+      setTimeout(() => {
+        loader.classList.add('hidden-loader');
+        document.body.style.opacity = '1';
+      }, 800); // Short, professional delay
+    });
 
-    counters.forEach(counter => {
-      const target = +counter.dataset.target;
-      let count = 0;
-      const increment = target / 120;
+    // 2. Mobile Menu Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    menuBtn.addEventListener("click", () => {
+      const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.classList.toggle("hidden");
+    });
 
-      const update = () => {
-        count += increment;
-        if (count < target) {
-          counter.textContent = Math.floor(count);
-          requestAnimationFrame(update);
-        } else {
-          counter.textContent = target;
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add("hidden");
+        menuBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // 3. Scroll Reveal Animation (Intersection Observer)
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // Only animate once for performance
         }
-      };
-      update();
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.remove("page-enter");
+    // 4. Animated Counters (Triggered only when scrolled into view)
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.dataset.target;
+          
+          // Handle edge case where target is 0
+          if (target === 0) {
+            counter.textContent = "0";
+            observer.unobserve(counter);
+            return;
+          }
+
+          let count = 0;
+          const duration = 2000; // 2 seconds
+          const increment = target / (duration / 16); // 60fps
+
+          const updateCount = () => {
+            count += increment;
+            if (count < target) {
+              counter.textContent = Math.floor(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.textContent = target;
+            }
+          };
+          
+          updateCount();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(counter => {
+      counterObserver.observe(counter);
     });
 
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
+    // 5. Dynamic Year in Footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-
+    // 6. Navbar scroll effect for premium feel
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-xl', 'bg-brand-green/95', 'backdrop-blur-md');
+      } else {
+        navbar.classList.remove('shadow-xl', 'bg-brand-green/95', 'backdrop-blur-md');
+      }
+    });
   </script>
-
 </body>
-
 </html>
-
