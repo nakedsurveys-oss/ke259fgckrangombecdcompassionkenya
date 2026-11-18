@@ -1,247 +1,450 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Programs – Rang'ombe CDC | Compassion Kenya</title>
-<meta name="description" content="Explore holistic child development programs at Rang'ombe CDC including education, health, skills training, caregiver empowerment and community outreach.">
+    <!-- SEO & METADATA -->
+    <title>Programs – Rang'ombe CDC | Compassion Kenya</title>
+    <meta name="description" content="Explore holistic child development programs at Rang'ombe CDC including education, health, skills training, caregiver empowerment and community outreach.">
+    <meta name="keywords" content="Rang'ombe CDC, Compassion Kenya, Child Development, Full Gospel Church, Kenya Charity, Youth Empowerment">
+    <meta name="author" content="Rang'ombe Child Development Centre">
+    <meta name="theme-color" content="#064E3B">
 
-<!-- PREFETCH -->
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <!-- OPEN GRAPH / SOCIAL SHARING -->
+    <meta property="og:title" content="Programs – Rang'ombe CDC | Compassion Kenya">
+    <meta property="og:description" content="Transforming lives through holistic child development in the Rang'ombe community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ke-259-fgck-rangombe-cdc.vercel.app/programs.html">
+    <meta property="og:image" content="images/download.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-<!-- TAILWIND CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- PREFETCH & PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
-<!-- FAVICON -->
-<link rel="icon" type="image/png" href="images/download.jpg">
+    <!-- PREMIUM TYPOGRAPHY -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-    html, body {
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/download.jpg">
+    <link rel="apple-touch-icon" href="images/download.jpg">
 
-    .reveal {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.9s ease;
-    }
-
-    .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-</style>
-</head>
-
-<body class="bg-slate-50 text-slate-800">
-
-<!-- NAVBAR -->
-<nav class="bg-green-900 text-white fixed top-0 w-full z-50 shadow-lg">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-    <!-- LOGO -->
-    <div class="font-bold text-lg tracking-wide">
-      FULL GOSPEL RANG'OMBE CDC
-    </div>
-
-    <!-- DESKTOP MENU -->
-    <ul class="hidden md:flex gap-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
-      <li><a href="programs.html" class="text-yellow-300">Programs</a></li>
-      <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
-      <li><a href="staff.html" class="hover:text-yellow-300 transition">Staff</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300 transition">Contact</a></li>
-    </ul>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-  </div>
-
-  <!-- MOBILE DROPDOWN MENU -->
-  <div id="mobile-menu" class="hidden md:hidden bg-green-950">
-    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-yellow-300 block">Home</a></li>
-      <li><a href="programs.html" class="text-yellow-300">Programs</a></li>
-      <li><a href="gallery.html" class="hover:text-yellow-300 block">Gallery</a></li>
-      <li><a href="staff.html" class="hover:text-yellow-300 block">Staff</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300 block">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="pt-28 relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-24 text-center reveal">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
-            Our Programs
-        </h1>
-        <p class="max-w-3xl mx-auto text-lg leading-relaxed text-green-100">
-            Transforming lives through holistic child development —
-            nurturing spiritual growth, education, health, skills,
-            and strong families within the Rang'ombe community.
-        </p>
-    </div>
-</section>
-
-<!-- PROGRAMS INTRO -->
-<section class="max-w-4xl mx-auto px-6 py-16 text-center reveal">
-    <h2 class="text-2xl md:text-3xl font-bold text-green-900 mb-4">
-        Holistic Development Approach
-    </h2>
-    <p class="text-slate-600 leading-relaxed">
-        Our programs are carefully designed to address the complete
-        well-being of children and youth while empowering caregivers
-        and strengthening the wider community.
-    </p>
-</section>
-
-<!-- PROGRAMS GRID -->
-<section class="max-w-7xl mx-auto px-6 pb-24">
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251212-WA0001.jpg" class="w-full h-56 object-cover" alt="Child Development">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Child & Youth Development
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Mentorship, discipleship, life skills, and academic support
-                    that nurture confident, responsible, and purpose-driven youth.
-                </p>
-            </div>
-        </div>
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251212-WA0003.jpg" class="w-full h-56 object-cover" alt="Health & Nutrition">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Health & Nutrition
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Medical check-ups, nutrition monitoring, hygiene education,
-                    and preventive care to support healthy growth.
-                </p>
-            </div>
-        </div>
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251212-WA0009.jpg" class="w-full h-56 object-cover" alt="Education Support">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Education Support
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    School sponsorships, mentorship, follow-ups,
-                    and digital literacy programs that prepare learners for tomorrow.
-                </p>
-            </div>
-        </div>
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251212-WA0010.jpg" class="w-full h-56 object-cover" alt="Skills Development">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Skills & Talent Development
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    ICT training, vocational skills, and talent development
-                    that promote self-reliance and innovation.
-                </p>
-            </div>
-        </div>
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251212-WA0008.jpg" class="w-full h-56 object-cover" alt="Caregiver Empowerment">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Caregiver Empowerment
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Parenting training, financial literacy, and support programs
-                    that strengthen families and child protection.
-                </p>
-            </div>
-        </div>
-
-        <!-- CARD -->
-        <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden reveal">
-            <img src="images/IMG-20251213-WA0000.jpg" class="w-full h-56 object-cover" alt="Community Outreach">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-green-900 mb-3">
-                    Community Outreach
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Awareness campaigns, church partnerships, and community initiatives
-                    that promote shared responsibility and sustainable growth.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- CALL TO ACTION -->
-<section class="bg-yellow-400">
-    <div class="max-w-7xl mx-auto px-6 py-20 text-center reveal">
-        <h2 class="text-3xl font-bold text-green-900 mb-4">
-            Be Part of the Impact
-        </h2>
-        <p class="max-w-2xl mx-auto mb-8 text-green-900">
-            Your support helps us continue transforming lives and
-            building stronger futures for children and families.
-        </p>
-        <a href="support.html"
-           class="inline-block bg-green-900 text-white px-10 py-3 rounded-lg font-semibold hover:bg-green-800 transition shadow-lg">
-            Support a Child
-        </a>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-green-900 text-white text-center py-6">
-    <p class="text-sm">© 2025 Rang'ombe CDC | Compassion Kenya</p>
-</footer>
-
-<!-- ANIMATION SCRIPT -->
-<script>
-    const reveals = document.querySelectorAll('.reveal');
-
-    function revealOnScroll() {
-        for (let el of reveals) {
-            const windowHeight = window.innerHeight;
-            const elementTop = el.getBoundingClientRect().top;
-            const revealPoint = 100;
-
-            if (elementTop < windowHeight - revealPoint) {
-                el.classList.add('active');
+    <!-- TAILWIND CSS WITH CUSTOM CONFIG -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#064E3B',    // Deep green (green-900)
+                            dark: '#022C22',     // Darker green (green-950)
+                            mid: '#047857',      // Mid green (green-700)
+                            gold: '#FACC15',     // Yellow/Gold (yellow-400)
+                            goldHover: '#EAB308',// Gold hover (yellow-500)
+                            light: '#F8FAFC',    // Soft neutral (slate-50)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'scale-in': 'scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
             }
         }
-    }
+    </script>
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    <!-- CUSTOM STYLES -->
+    <style>
+        /* Base smoothness */
+        html, body {
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        }
 
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
+        /* Scroll Reveal Base State */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-</script>
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
+        /* Stagger delays for grid items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+        .delay-600 { transition-delay: 600ms; }
+
+        /* Accessibility: Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal.active {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #064E3B;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #047857;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <!-- PROFESSIONAL PAGE LOADER -->
+    <div id="page-loader" class="fixed inset-0 z-[100] bg-brand-green flex flex-col items-center justify-center transition-opacity duration-700 ease-out">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-brand-gold/30 border-t-brand-gold rounded-full animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-8 h-8 bg-brand-gold rounded-full opacity-20 animate-ping"></div>
+            </div>
+        </div>
+        <h2 class="text-white text-lg font-bold tracking-[0.2em] mt-6 animate-pulse">RANG'OMBE CDC</h2>
+        <p class="text-brand-gold/80 text-xs mt-2 tracking-widest uppercase">Loading Experience</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="bg-brand-green text-white fixed top-0 w-full z-50 transition-all duration-300 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="index.html" class="font-bold text-lg tracking-wide flex items-center gap-2 group">
+                <span class="w-2 h-2 bg-brand-gold rounded-full group-hover:scale-125 transition-transform duration-300"></span>
+                FULL GOSPEL RANG'OMBE CDC
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <ul class="hidden md:flex gap-8 text-sm font-semibold">
+                <li><a href="index.html" class="relative hover:text-brand-gold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
+                <li><a href="programs.html" class="text-brand-gold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-brand-gold">Programs</a></li>
+                <li><a href="gallery.html" class="relative hover:text-brand-gold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full">Gallery</a></li>
+                <li><a href="staff.html" class="relative hover:text-brand-gold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full">Staff</a></li>
+                <li><a href="contact.html" class="relative hover:text-brand-gold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full">Contact</a></li>
+            </ul>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="menu-btn" class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-brand-mid transition-colors" aria-label="Toggle Menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- MOBILE DROPDOWN MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-mid/30 overflow-hidden transition-all duration-300">
+            <ul class="flex flex-col px-6 py-4 gap-2 text-sm font-medium">
+                <li><a href="index.html" class="block py-3 px-4 rounded-lg hover:bg-brand-mid/50 hover:text-brand-gold transition-all duration-200">Home</a></li>
+                <li><a href="programs.html" class="block py-3 px-4 rounded-lg bg-brand-mid/30 text-brand-gold font-semibold">Programs</a></li>
+                <li><a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-brand-mid/50 hover:text-brand-gold transition-all duration-200">Gallery</a></li>
+                <li><a href="staff.html" class="block py-3 px-4 rounded-lg hover:bg-brand-mid/50 hover:text-brand-gold transition-all duration-200">Staff</a></li>
+                <li><a href="contact.html" class="block py-3 px-4 rounded-lg hover:bg-brand-mid/50 hover:text-brand-gold transition-all duration-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-28 relative bg-gradient-to-br from-brand-green via-brand-mid to-brand-green text-white overflow-hidden">
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FACC15 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold tracking-widest uppercase mb-6 animate-slide-up">
+                Empowering Futures
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight animate-slide-up" style="animation-delay: 100ms;">
+                Our Programs
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-green-100 animate-slide-up" style="animation-delay: 200ms;">
+                Transforming lives through holistic child development — nurturing spiritual growth, education, health, skills, and strong families within the Rang'ombe community.
+            </p>
+        </div>
+        
+        <!-- Bottom Fade -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-light to-transparent"></div>
+    </section>
+
+    <!-- PROGRAMS INTRO -->
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center reveal">
+        <div class="w-16 h-1 bg-brand-gold mx-auto mb-6 rounded-full"></div>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-6">
+            Holistic Development Approach
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed">
+            Our programs are carefully designed to address the complete well-being of children and youth while empowering caregivers and strengthening the wider community. Every initiative is rooted in compassion, sustainability, and measurable impact.
+        </p>
+    </section>
+
+    <!-- PROGRAMS GRID -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- CARD 1 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-100">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251212-WA0001.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Child & Youth Development at Rang'ombe CDC" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Child & Youth Development</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">Mentorship, discipleship, life skills, and academic support that nurture confident, responsible, and purpose-driven youth.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-200">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251212-WA0003.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Health & Nutrition programs" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Health & Nutrition</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">Medical check-ups, nutrition monitoring, hygiene education, and preventive care to support healthy physical growth.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-300">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251212-WA0009.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Education Support initiatives" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Education Support</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">School sponsorships, mentorship, follow-ups, and digital literacy programs that prepare learners for tomorrow's opportunities.</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-400">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251212-WA0010.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Skills & Talent Development" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Skills & Talent Development</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">ICT training, vocational skills, and talent development that promote self-reliance, creativity, and innovation.</p>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-500">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251212-WA0008.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Caregiver Empowerment programs" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Caregiver Empowerment</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">Parenting training, financial literacy, and support programs that strengthen families and ensure robust child protection.</p>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-green/10 transition-all duration-500 overflow-hidden border border-slate-100 hover:border-brand-gold/40 reveal delay-600">
+                <div class="overflow-hidden relative">
+                    <div class="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/10 transition-colors duration-500 z-10"></div>
+                    <img src="images/IMG-20251213-WA0000.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110" alt="Community Outreach initiatives" loading="lazy">
+                </div>
+                <div class="p-8">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-green mb-3 group-hover:text-brand-mid transition-colors">Community Outreach</h3>
+                    <p class="text-sm leading-relaxed text-slate-600">Awareness campaigns, church partnerships, and community initiatives that promote shared responsibility and sustainable growth.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="relative bg-brand-green overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-brand-mid/30 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 py-24 text-center relative z-10 reveal">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Be Part of the <span class="text-brand-gold">Impact</span>
+            </h2>
+            <p class="max-w-2xl mx-auto mb-10 text-lg text-green-100 leading-relaxed">
+                Your support helps us continue transforming lives and building stronger, self-reliant futures for children and families in the Rang'ombe community.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="support.html" class="group inline-flex items-center justify-center bg-brand-gold text-brand-green px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-goldHover transition-all duration-300 shadow-lg hover:shadow-brand-gold/30 hover:-translate-y-1">
+                    Support a Child
+                    <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white border-t border-brand-mid/30">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg tracking-wide mb-2">FULL GOSPEL RANG'OMBE CDC</h3>
+                    <p class="text-slate-400 text-sm max-w-md">A ministry of the Full Gospel Church partnering with Compassion Kenya to release children from poverty in Jesus' name.</p>
+                </div>
+                
+                <div class="flex gap-6 text-sm text-slate-400">
+                    <a href="index.html" class="hover:text-brand-gold transition-colors">Home</a>
+                    <a href="programs.html" class="hover:text-brand-gold transition-colors">Programs</a>
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-mid/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; <span id="current-year"></span> Rang'ombe CDC | Compassion Kenya. All rights reserved.</p>
+                <p>Designed with compassion and excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ENHANCED SCRIPTS -->
+    <script>
+        // 1. PROFESSIONAL PAGE LOADER
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            // Ensure loader doesn't get stuck; max 1.5 seconds
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    // Trigger initial animations after loader is gone
+                    document.querySelectorAll('.animate-slide-up').forEach(el => {
+                        el.style.opacity = '1';
+                    });
+                }, 700);
+            }, 800);
+        });
+
+        // 2. INTERSECTION OBSERVER FOR SCROLL REVEALS (Better Performance than scroll event)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // 3. ENHANCED MOBILE MENU
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener("click", () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle("hidden");
+            menuBtn.setAttribute("aria-expanded", isMenuOpen);
+            
+            // Animate icon
+            if (isMenuOpen) {
+                menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+            } else {
+                menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add("hidden");
+                menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        // 4. NAVBAR SCROLL EFFECT (Glassmorphism on scroll)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-green/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.remove('shadow-lg');
+            } else {
+                navbar.classList.remove('bg-brand-green/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.add('shadow-lg');
+            }
+        });
+
+        // 5. DYNAMIC YEAR IN FOOTER
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
